@@ -75,28 +75,13 @@
   </div>
 </section>
 
-<section class="promo-slideshow">
+<section class="promo-hero">
   <div class="promo-slides" id="promoSlides"></div>
 
-  <!-- Navigation arrows -->
+  <!-- Optional navigation arrows -->
   <button class="prev" onclick="changeSlide(-1)">&#10094;</button>
   <button class="next" onclick="changeSlide(1)">&#10095;</button>
 </section>
-
-
-<script>
-fetch('/uploads/')
-  .then(res => res.json())
-  .then(files => {
-    const gallery = document.getElementById('promo-gallery');
-    files.forEach(file => {
-      const img = document.createElement('img');
-      img.src = '/uploads/' + file;
-      gallery.appendChild(img);
-    });
-  });
-</script>
-
 
 <section class="why-sundance">
   <div class="container">
