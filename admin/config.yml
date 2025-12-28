@@ -1,42 +1,16 @@
-.promo-slideshow {
-  position: relative;
-  width: 100%;
-  max-height: 500px;
-  overflow: hidden;
-  margin-top: 40px;
-}
+backend:
+  name: git-gateway
+  branch: main
 
-.promo-slides img {
-  width: 100%;
-  display: none;
-  object-fit: cover;
-}
+media_folder: "content/promotions"   # Where images are saved
+public_folder: "/content/promotions" # URL path for images
 
-.prev, .next {
-  cursor: pointer;
-  position: absolute;
-  top: 50%;
-  padding: 12px;
-  margin-top: -22px;
-  color: white;
-  font-weight: bold;
-  font-size: 24px;
-  background: rgba(0,0,0,0.4);
-  border: none;
-  border-radius: 50%;
-  z-index: 10;
-  user-select: none;
-}
-
-.prev { left: 20px; }
-.next { right: 20px; }
-
-.promo-slides img.active {
-  display: block;
-  animation: fadeSlide 1s ease-in-out;
-}
-
-@keyframes fadeSlide {
-  from {opacity: 0.4;}
-  to {opacity: 1;}
-}
+collections:
+  - name: "promotions"
+    label: "Promotional Images"
+    folder: "content/promotions"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Image", name: "image", widget: "image" }

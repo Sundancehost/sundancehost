@@ -1,7 +1,7 @@
 const slideContainer = document.getElementById("promoSlides");
 let slideIndex = 0;
 
-// Fetch the list of CMS entries
+// Fetch CMS content
 fetch('/content/promotions/index.json')
   .then(res => res.json())
   .then(data => {
@@ -14,10 +14,9 @@ fetch('/content/promotions/index.json')
       slideContainer.appendChild(img);
     });
 
-    // Auto-slide
     setInterval(() => changeSlide(1), 5000);
   })
-  .catch(err => console.log("No promotions found or CMS not built yet", err));
+  .catch(err => console.log("No promotions found", err));
 
 function showSlide(n) {
   const slides = slideContainer.getElementsByTagName("img");
