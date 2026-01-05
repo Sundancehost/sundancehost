@@ -5,7 +5,7 @@ document.addEventListener('DOMContentLoaded', () => {
   ================================ */
   const heroBanner = document.querySelector('.hero-banner');
   if (heroBanner) {
-    const images = ['banner1.jpg', 'banner2.png'];
+    const images = ['banner1.jpg', 'banner2.jpg'];
     let index = 0;
 
     setInterval(() => {
