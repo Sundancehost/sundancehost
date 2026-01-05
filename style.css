@@ -1118,3 +1118,113 @@ article ul li::before{
   opacity: 1 !important;
   transform: translateY(0) !important;
 }
+/* =========================================================
+   MOBILE FIX PATCH (paste at bottom)
+   - Hero buttons visibility + spacing
+   - Footer tiles less "vertical" on mobile
+========================================================= */
+
+/* --- HERO MOBILE: ensure buttons always fit --- */
+@media (max-width: 768px){
+  /* Give hero a bit more usable height and reduce padding */
+  .hero-banner{
+    height: auto;                 /* let content decide */
+    min-height: 560px;            /* enough room for buttons */
+    padding: 26px 0;              /* breathing room */
+  }
+
+  .hero-overlay{
+    padding: 18px;                /* tighter */
+  }
+
+  .hero-content{
+    padding: 18px 14px !important;
+    max-width: 94% !important;
+    border-radius: 18px;
+  }
+
+  .hero-tagline{
+    font-size: clamp(1.55rem, 6vw, 2.1rem) !important;
+    margin-bottom: 10px !important;
+  }
+
+  .hero-overlay h1{
+    font-size: 1rem !important;
+    margin-bottom: 14px !important;
+    line-height: 1.4 !important;
+    max-width: 38ch !important;
+  }
+
+  /* Buttons: stack cleanly + full width */
+  .hero-buttons{
+    gap: 10px !important;
+    margin-top: 10px !important;
+  }
+
+  .hero-buttons .btn{
+    width: 100%;
+    max-width: 420px;             /* still looks nice on big phones */
+    padding: 13px 18px !important;
+    justify-content: center;
+  }
+}
+
+/* Extra small phones */
+@media (max-width: 420px){
+  .hero-banner{ min-height: 520px; }
+  .hero-content{ padding: 16px 12px !important; }
+  .hero-overlay h1{ font-size: 0.98rem !important; }
+}
+
+/* --- FOOTER MOBILE: make tiles compact + less vertical --- */
+@media (max-width: 768px){
+  .site-footer{
+    padding: 46px 14px 22px !important;
+  }
+
+  /* Two columns on mobile instead of one long vertical stack */
+  .footer-container{
+    grid-template-columns: 1fr 1fr !important;
+    gap: 12px !important;
+    text-align: left !important;
+  }
+
+  .footer-column{
+    padding: 14px !important;
+    border-radius: 16px !important;
+    min-height: 140px;            /* keeps boxes visually even */
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+
+  .footer-column h3{
+    font-size: 0.95rem !important;
+    margin-bottom: 8px !important;
+    padding-bottom: 8px !important;
+  }
+
+  .footer-column p{
+    font-size: 0.9rem !important;
+    line-height: 1.5 !important;
+  }
+}
+
+/* Very small: go back to 1 column when 2 becomes cramped */
+@media (max-width: 430px){
+  .footer-container{
+    grid-template-columns: 1fr !important;
+  }
+  .footer-column{
+    min-height: auto;
+  }
+}
+
+/* --- MOBILE NAV POSITIONING FIX (optional but helps) --- */
+@media (max-width: 768px){
+  /* If your header/top-bar heights vary, this prevents overlap */
+  .site-header{ top: 0 !important; }  /* keeps sticky simple on mobile */
+  .top-bar{ position: relative; }     /* avoid stacking weirdness */
+
+  /* If you prefer keeping sticky top-bar, remove the two lines above. */
+}
