@@ -933,6 +933,7 @@ article ul li::before {
     rgba(23,195,178,0.35),
     rgba(242,194,0,0.25)
   );
+  
   -webkit-mask:
     linear-gradient(#000 0 0) content-box,
     linear-gradient(#000 0 0);
