@@ -7,13 +7,6 @@ Sundance Radio is your home for great music, community voices, and independent s
 Whether you’re tuning in for music, shows, or community features, Sundance Radio is here to inform, inspire, and entertain.
 
 
-## What We Do
-
-
-- Showcase a wide range of music and programming
-- Support independent and emerging artists
-- Share voices and stories from our community
-- Create a welcoming space for listeners of all ages
 
 
 ## Two-Way Radios
