@@ -16,7 +16,10 @@ Whether you’re tuning in for music, shows, or community features, Sundance Rad
 - Create a welcoming space for listeners of all ages
 
 
-## Get Involved
+## Two-Way Radios
 
 
-We love hearing from our listeners. Explore our shows, check the schedule, or reach out if you’d like to collaborate or share an idea.
+
+Sundance Radio Communications has been a leader in two-way communications for both Retail and corporate clients in Calgary for the last 25 years and have a wide range of Kenwood two-way radio products & accessories.
+
+Being a Sales and service shop we have both outbound and inbound staff to complete your sales, service and installation needs to ensure that all of our clients needs are met.
